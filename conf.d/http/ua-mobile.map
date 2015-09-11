@@ -1,0 +1,6 @@
+# Simple check ua type mobile(pc wap)
+map $http_user_agent $ua_type {
+	default                                     "pc";
+	"~(iPhone|Android|iPad|IEMobile)"           "mobile";
+	"~(MSIE 5|MSIE 6|MSIE 7|Bada|Symbian|iPod)" "wap";
+}
